@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Platform } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Slider from './slider';
 import metrics from '../utils/metrics';
@@ -49,8 +49,16 @@ const styles = StyleSheet.create({
     height: metrics.height * 0.13,
     flexDirection: 'column',
     backgroundColor: colors.background,
-    position: 'absolute',
-    top: metrics.height * 0.87,
+    ...Platform.select({
+      ios: {
+        position: 'absolute',
+        top: metrics.height * 0.87,
+      },
+      android: {
+        position: 'absolute',
+        top: metrics.height * 0.84,
+      }
+    }),
     borderTopRightRadius: 70,
     alignSelf: 'center',
     width: metrics.width

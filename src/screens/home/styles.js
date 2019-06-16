@@ -9,15 +9,13 @@ export default StyleSheet.create({
   },
   image: {
     width: metrics.width,
-    height: metrics.height * 0.3,
+    height: metrics.height * 0.1,
   },
   whiteBack: {
     backgroundColor: colors.white,
     height: metrics.height,
     width: metrics.width,
     borderTopRightRadius: 70,
-    position: 'absolute',
-    top: metrics.height * 0.2
   },
   title: {
     marginLeft: metrics.width * 0.05,
@@ -60,6 +58,7 @@ export default StyleSheet.create({
   tabBar: {
     alignSelf: 'center',
     marginHorizontal: metrics.width * 0.06,
-    marginTop: metrics.height * 0.01
+    marginTop: metrics.height * 0.01,
+    height: metrics.height
   }
 });

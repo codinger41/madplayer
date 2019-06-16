@@ -16,8 +16,6 @@ export default StyleSheet.create({
     height: metrics.height,
     width: metrics.width,
     borderTopRightRadius: 70,
-    position: 'absolute',
-    top: metrics.height * 0.2
   },
   title: {
     marginTop: metrics.height * 0.02,
