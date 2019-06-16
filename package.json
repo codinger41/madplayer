@@ -13,8 +13,13 @@
     "react-native-linear-gradient": "^2.5.4",
     "react-native-scrollable-tab-view": "^0.10.0",
     "react-native-slider": "^0.11.0",
+    "react-native-swift": "^1.2.2",
+    "react-native-track-player": "^1.1.4",
     "react-native-vector-icons": "^6.5.0",
-    "react-navigation": "^3.11.0"
+    "react-navigation": "^3.11.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -26,5 +31,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "isSwift": true
 }
