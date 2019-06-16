@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { View, Text, StatusBar, Image, TouchableOpacity } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Feather from 'react-native-vector-icons/Feather'
 import Entypo from 'react-native-vector-icons/Entypo';
 import styles from './styles';
 import Slider from '../../components/slider';
 import colors from '../../utils/colors';
 
-const Home = (props) => {
+const Home = ({ navigation: { goBack } }) => {
   useEffect(() => {
     StatusBar.setBarStyle('light-content', true);
   }, [])
@@ -17,6 +18,13 @@ const Home = (props) => {
         source={require('../../assets/images/music.jpeg')}
         style={styles.image}
       />
+      <TouchableOpacity onPress={() => goBack()} style={styles.backbutton}>
+        <MaterialIcons
+          name="arrow-back"
+          color={colors.white}
+          size={30}
+        />
+      </TouchableOpacity>
       <View style={styles.curvedBack}>
         <Image
           style={styles.albumArt}

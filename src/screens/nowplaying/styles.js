@@ -110,5 +110,10 @@ export default StyleSheet.create({
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
     elevation: 7,
+  },
+  backbutton: {
+    position: 'absolute',
+    top: 50,
+    left: 10
   }
 });
