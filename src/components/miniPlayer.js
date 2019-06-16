@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
-import Slider from 'react-native-slider';
+import Slider from './slider';
 import metrics from '../utils/metrics';
 import colors from '../utils/colors';
 
@@ -24,7 +24,6 @@ export default () => {
             size={30}
           />
         </TouchableOpacity>
-        <View style={styles.slider}>
           <Slider
             value={0.2}
             minimumTrackTintColor='#ec4c46'
@@ -32,7 +31,6 @@ export default () => {
             thumbStyle={styles.thumb}
             onValueChange={value => console.log(value)}
           />
-        </View>
         <TouchableOpacity style={styles.icon2}>
           <Entypo
             name="controller-stop"

@@ -7,7 +7,7 @@ const App = createStackNavigator({
   Home: { screen: Home },
   NowPlaying: { screen: NowPlaying }
 }, {
-  initialRouteName: 'Home',
+  initialRouteName: 'NowPlaying',
   headerMode: 'none'
 });
 

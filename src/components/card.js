@@ -1,14 +1,18 @@
 import React from 'react';
+import { withNavigation } from 'react-navigation'
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import metrics from '../utils/metrics';
 import colors from '../utils/colors';
 
 
-export default () => {
+export default withNavigation(({ navigation: { navigate } }) => {
   return (
     <View style={styles.card}>
-      <TouchableOpacity style={styles.row}>
+      <TouchableOpacity
+        style={styles.row}
+        onPress={() => navigate('NowPlaying')}
+      >
         <Image
           style={styles.image}
           source={require('../assets/images/music.jpeg')}
@@ -27,7 +31,7 @@ export default () => {
       </TouchableOpacity>
     </View>
   )
-};
+});
 
 
 const styles = StyleSheet.create({
